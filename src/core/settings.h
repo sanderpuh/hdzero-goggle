@@ -48,6 +48,7 @@ typedef struct {
     setting_autoscan_source_t last_source;
     setting_autoscan_source_t source;
     setting_autoscan_toggle_t toggle;
+    setting_autoscan_beeper_t beeper;
 } setting_autoscan_t;
 
 typedef enum {
