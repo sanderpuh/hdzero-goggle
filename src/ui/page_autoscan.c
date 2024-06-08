@@ -68,9 +68,18 @@ static lv_obj_t *page_autoscan_create(lv_obj_t *parent, panel_arr_t *arr) {
 
 void source_toggle() {
     if (g_setting.autoscan.toggle == 1) {
-        source_race();
+        if (g_setting.autoscan.beeper == SETTING_AUTOSCAN_BEEPER_ON) {
+            beep_dur(BEEP_SHORT);
+            source_RACE();
+        } else {
+            source_race();
     } else {
-        source_cycle();
+        if (g_setting.autoscan.beeper == SETTING_AUTOSCAN_BEEPER_ON) {
+            beep_dur(BEEP_SHORT);
+            source_cycle();
+        } else {
+            source_cycle();
+        }
     }
 }
 static void page_autoscan_on_click(uint8_t key, int sel) {
@@ -96,7 +105,7 @@ static void page_autoscan_on_click(uint8_t key, int sel) {
 page_pack_t pp_autoscan = {
     .p_arr = {
         .cur = 0,
-        .max = 5,
+        .max = 6,
     },
     .name = "Auto Scan",
     .create = page_autoscan_create,
