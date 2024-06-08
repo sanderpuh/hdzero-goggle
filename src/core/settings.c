@@ -31,6 +31,7 @@ const setting_t g_setting_defaults = {
         .last_source = SETTING_AUTOSCAN_SOURCE_LAST,
         .source = SETTING_AUTOSCAN_SOURCE_HDZERO,
         .toggle = SETTING_AUTOSCAN_TOGGLE_CYCLE,
+        .beeper = SETTING_AUTOSCAN_BEEPER,
     },
     .power = {
         .voltage = 35,
