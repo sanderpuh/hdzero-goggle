@@ -197,7 +197,7 @@ int main(int argc, char *argv[]) {
 
     // 10. Execute main loop
     g_init_done = 1;
-    if (g_setting.autoscan.buzzer == SETTING_AUTOSCAN_BEEPER_BOOT) {
+    if (g_setting.autoscan.beeper == SETTING_AUTOSCAN_BEEPER_BOOT) {
     	beep_dur(BEEP_SHORT);
     }
     for (;;) {
