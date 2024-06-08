@@ -37,6 +37,12 @@ typedef enum {
     SETTING_AUTOSCAN_TOGGLE_RACE = 1,
 } setting_autoscan_toggle_t;
 
+typedef enum {
+    SETTING_AUTOSCAN_BEEPER_ON = 0,
+    SETTING_AUTOSCAN_BEEPER_BOOT = 1,
+    SETTING_AUTOSCAN_BEEPER_OFF = 2
+} setting_autoscan_beeper_t;
+
 typedef struct {
     setting_autoscan_status_t status;
     setting_autoscan_source_t last_source;
