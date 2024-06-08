@@ -197,6 +197,9 @@ int main(int argc, char *argv[]) {
 
     // 10. Execute main loop
     g_init_done = 1;
+    if (g_setting.autoscan.buzzer == SETTING_AUTOSCAN_BUZZER_BOOT) {
+    	beep_dur(BEEP_SHORT);
+    }
     for (;;) {
         pthread_mutex_lock(&lvgl_mutex);
         main_menu_update();
