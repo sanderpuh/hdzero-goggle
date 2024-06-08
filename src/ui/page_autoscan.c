@@ -74,6 +74,7 @@ void source_toggle() {
             source_race();
         } else {
             source_race();
+        }
     } else {
         if (g_setting.autoscan.beeper == SETTING_AUTOSCAN_BEEPER_ON) {
             beep_dur(BEEP_SHORT);
